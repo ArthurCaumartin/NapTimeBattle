@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
+    [SerializeField] private Color _hurtColor;
     [SerializeField] private float _maxLife = 100;
     [SerializeField] public float _currentLife = 0;
     [SerializeField] private PlayerMovement _playerMovement;
@@ -19,7 +20,6 @@ public class PlayerLife : MonoBehaviour
         _currentLife -= value;
         StartCoroutine(InvincibilityDuration(1));
         if (_currentLife <= 0) Destroy(gameObject);
-
         _playerMovement.SetKnockBack(knockBack);
     }
 
@@ -27,7 +27,7 @@ public class PlayerLife : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
         {
-            _spriteRenderer.color = Color.red;
+            _spriteRenderer.color = _hurtColor;
             yield return new WaitForSeconds(duration / 4 / 2);
             _spriteRenderer.color = Color.white;
             yield return new WaitForSeconds(duration / 4 / 2);
