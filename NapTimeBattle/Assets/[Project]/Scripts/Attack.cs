@@ -13,7 +13,7 @@ public class Attack : MonoBehaviour
         Collider2D[] cols = Physics2D.OverlapCircleAll(_attackPoint.position, _range, _layerMask);
         for (int i = 0; i < cols.Length; i++)
         {
-            if (cols[i].gameObject == gameObject) continue;
+            if (cols[i].gameObject == transform.parent) continue;
             PlayerLife pl = cols[i].GetComponent<PlayerLife>();
             pl?.DoDamage(_damage, (pl.transform.position - transform.position).normalized * _knockBackForce);
         }

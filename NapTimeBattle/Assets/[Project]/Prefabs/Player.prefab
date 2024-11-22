@@ -257,7 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _attack: {fileID: 869502307276421589}
   _animator: {fileID: 4783981229190576553}
-  _attackPerSecond: 1
+  _attackPerSecond: 2.74
 --- !u!1 &9100949488765567447
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,5 +382,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   _damage: 10
-  _range: 0.7
+  _range: 1.58
   _knockBackForce: 30
