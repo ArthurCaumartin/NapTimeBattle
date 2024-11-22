@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,10 +139,10 @@ TextureImporter:
       name: CD_Marche_L_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 213
-        width: 960
-        height: 1736
+        x: 122
+        y: 99
+        width: 483
+        height: 858
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: CD_Marche_L_1
       rect:
         serializedVersion: 2
-        x: 1155
-        y: 213
-        width: 802
-        height: 1736
+        x: 757
+        y: 99
+        width: 401
+        height: 871
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: CD_Marche_L_2
       rect:
         serializedVersion: 2
-        x: 2053
-        y: 215
-        width: 800
-        height: 1736
+        x: 1314
+        y: 99
+        width: 448
+        height: 885
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: CD_Marche_L_3
       rect:
         serializedVersion: 2
-        x: 2949
-        y: 215
-        width: 800
-        height: 1736
+        x: 1965
+        y: 99
+        width: 402
+        height: 871
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

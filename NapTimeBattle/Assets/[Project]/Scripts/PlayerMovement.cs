@@ -12,9 +12,11 @@ public class PlayerMovement : MonoBehaviour
     private Animator _animator;
     private AnimatorControler _animControler;
     private Vector2 _knockBack;
+    private SpriteRenderer _renderer;
 
     private void Start()
     {
+        _renderer = GetComponentInChildren<SpriteRenderer>();
         _animator = GetComponentInChildren<Animator>();
         _animControler = GetComponent<AnimatorControler>();
         _rb = GetComponent<Rigidbody2D>();
@@ -30,10 +32,11 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 dir = _rb.velocity.ConvertTo8Direction().normalized;
 
+        _renderer.flipX = _rb.velocity.x < 0;
         if (_rb.velocity.magnitude <= .1f)
             _animControler.SetState(AnimatorControler.IDLE);
         else
-            _animControler.SetState(_rb.velocity.x > 0 ? AnimatorControler.MOVE_RIGHT : AnimatorControler.MOVE_LEFT);
+            _animControler.SetState(AnimatorControler.MOVE_RIGHT);
 
         _animator.SetFloat("DirectionX", dir.x);
         _animator.SetFloat("DirectionY", dir.y);

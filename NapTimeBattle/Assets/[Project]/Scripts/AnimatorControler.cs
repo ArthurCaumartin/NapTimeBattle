@@ -4,7 +4,7 @@ public class AnimatorControler : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
 
-    public static string IDLE = "IDLE";
+    public static string IDLE = "Idle";
     public static string MOVE_RIGHT = "MoveRight";
     public static string MOVE_LEFT = "MoveLeft";
 
