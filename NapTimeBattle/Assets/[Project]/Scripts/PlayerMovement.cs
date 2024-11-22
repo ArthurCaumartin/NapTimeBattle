@@ -44,6 +44,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetKnockBack(Vector2 value)
     {
-        _knockBack = value;
+        _knockBack += value;
     }
 }

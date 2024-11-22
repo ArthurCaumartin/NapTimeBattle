@@ -7,6 +7,7 @@ public class PlayerLife : MonoBehaviour
     [SerializeField] private float _currentLife = 0;
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    public bool _hisHide;
 
     private void Start()
     {
