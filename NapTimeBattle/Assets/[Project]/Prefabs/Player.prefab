@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 6287994386771288541}
   - component: {fileID: 142205927623222673}
   - component: {fileID: 9166653811579318375}
+  - component: {fileID: 965563824164183425}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -172,6 +173,7 @@ MonoBehaviour:
   _currentLife: 0
   _playerMovement: {fileID: 3559082430647650605}
   _spriteRenderer: {fileID: 5151791810601405914}
+  _hisHide: 0
 --- !u!50 &6656597347543969028
 Rigidbody2D:
   serializedVersion: 4
@@ -273,6 +275,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 4783981229190576553}
   _currentState: 
+--- !u!114 &965563824164183425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3007221392902201822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c8452d66af03a469cafc4ee0171482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _life: {fileID: 2676828209411945057}
 --- !u!1 &9100949488765567447
 GameObject:
   m_ObjectHideFlags: 0

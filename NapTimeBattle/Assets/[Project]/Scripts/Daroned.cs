@@ -7,7 +7,7 @@ public class Daroned : MonoBehaviour
     [SerializeField] private List<PlayerLife> _playerLifeList;
     [SerializeField] private float _minTimeBetweenDaronage = 10;
     [SerializeField] private float _maxTimeBetweenDaronage = 15;
-    private float _currentDaronageTime;
+    public float _currentDaronageTime;
     public float _currentTimeBetweenDaronage;
 
     void Start()
@@ -32,6 +32,7 @@ public class Daroned : MonoBehaviour
         {
             if(!item._hisHide) item.DoDamage(1000, Vector2.zero);
         }
+        enabled = false;
     }
 }
 
