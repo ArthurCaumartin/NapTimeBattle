@@ -20,7 +20,7 @@ public class Attack : MonoBehaviour
                 continue;
             }
             print("Damage " + pl.name);
-            pl?.DoDamage(_damage, (pl.transform.position - transform.position).normalized * _knockBackForce);
+            pl?.DoDamage(_damage, (pl.transform.position - transform.parent.position).normalized * _knockBackForce);
         }
     }
 

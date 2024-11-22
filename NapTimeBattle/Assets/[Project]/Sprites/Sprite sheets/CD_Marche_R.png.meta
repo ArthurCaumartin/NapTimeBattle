@@ -143,8 +143,8 @@ TextureImporter:
         y: 99
         width: 482
         height: 858
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.53457814, y: 0.055814553}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -164,8 +164,8 @@ TextureImporter:
         y: 99
         width: 400
         height: 871
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5027777, y: 0.054790072}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -185,8 +185,8 @@ TextureImporter:
         y: 99
         width: 450
         height: 885
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.44074056, y: 0.053044483}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,12 +202,12 @@ TextureImporter:
       name: CD_Marche_R_3
       rect:
         serializedVersion: 2
-        x: 1966
+        x: 1967
         y: 99
         width: 402
         height: 871
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5126789, y: 0.059951257}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

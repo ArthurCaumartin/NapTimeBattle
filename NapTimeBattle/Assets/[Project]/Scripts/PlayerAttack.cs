@@ -27,8 +27,6 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
-        print("Attack !");
-        _attack.DoAttack();
-        _animator.SetTrigger("Attack");
+        _animator.SetTrigger("AttackTrigger");
     }
 }

@@ -33,13 +33,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 dir = _rb.velocity.ConvertTo8Direction().normalized;
 
         _renderer.flipX = _rb.velocity.x < 0;
-        if (_rb.velocity.magnitude <= .1f)
-            _animControler.SetState(AnimatorControler.IDLE);
-        else
-            _animControler.SetState(AnimatorControler.MOVE_RIGHT);
-
-        _animator.SetFloat("DirectionX", dir.x);
-        _animator.SetFloat("DirectionY", dir.y);
+        _animator.SetBool("IsMoving", _rb.velocity.magnitude > .1f);
     }
 
     public void SetKnockBack(Vector2 value)

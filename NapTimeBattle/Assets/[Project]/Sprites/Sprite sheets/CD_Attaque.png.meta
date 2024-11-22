@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c5453036461ae604d819518c40270dfa
+guid: b5eb1804b7173ed47aa73bdadcae9264
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,85 +136,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CD Idle R_0
+      name: CD_Attaque_2
       rect:
         serializedVersion: 2
-        x: 99
-        y: 105
-        width: 400
-        height: 883
+        x: 144
+        y: 184
+        width: 440
+        height: 1259
       alignment: 9
-      pivot: {x: 0.49166664, y: 0.048257105}
+      pivot: {x: 0.50722885, y: 0.045926835}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 114550e723adfdb41aba705804ea6126
-      internalID: 1744254682
+      spriteID: 3609856fc38608845bcb04a55e63cd91
+      internalID: 1511713319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CD Idle R_1
+      name: CD_Attaque_3
       rect:
         serializedVersion: 2
-        x: 623
-        y: 105
-        width: 401
-        height: 871
+        x: 1227
+        y: 165
+        width: 929
+        height: 886
       alignment: 9
-      pivot: {x: 0.5304792, y: 0.054790143}
+      pivot: {x: 0.22421832, y: 0.08791548}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e08875eca71b4348ac5566f90405c19
-      internalID: -774107602
+      spriteID: f048e3a4889e3134a81cc0aeb2d00a59
+      internalID: 1913164074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CD Idle R_2
+      name: CD_Attaque_5
       rect:
         serializedVersion: 2
-        x: 1137
-        y: 105
-        width: 400
-        height: 862
+        x: 2303
+        y: 166
+        width: 746
+        height: 890
       alignment: 9
-      pivot: {x: 0.5027777, y: 0.05916463}
+      pivot: {x: 0.28245565, y: 0.082856305}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93d3158ecb174eb479a66c0873ddd958
-      internalID: -552513315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CD Idle R_3
-      rect:
-        serializedVersion: 2
-        x: 1659
-        y: 105
-        width: 402
-        height: 871
-      alignment: 9
-      pivot: {x: 0.51381916, y: 0.059892762}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1aa16b01d0e4dc4bb27881313988ca2
-      internalID: -910144858
+      spriteID: 9d5b0213db3f0e343ae9dbe7ff2321c5
+      internalID: -23669184
       vertices: []
       indices: 
       edges: []
@@ -230,10 +209,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CD Idle R_0: 1744254682
-      CD Idle R_1: -774107602
-      CD Idle R_2: -552513315
-      CD Idle R_3: -910144858
+      CD_Attaque_0: -1677405632
+      CD_Attaque_1: 1690200185
+      CD_Attaque_10: -723828984
+      CD_Attaque_2: 1511713319
+      CD_Attaque_3: 1913164074
+      CD_Attaque_4: 844223142
+      CD_Attaque_5: -23669184
+      CD_Attaque_6: -1975192168
+      CD_Attaque_7: -1203127772
+      CD_Attaque_8: 1107753707
+      CD_Attaque_9: 1829806584
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

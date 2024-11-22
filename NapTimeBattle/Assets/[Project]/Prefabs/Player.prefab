@@ -78,7 +78,6 @@ GameObject:
   - component: {fileID: 6656597347543969028}
   - component: {fileID: 6287994386771288541}
   - component: {fileID: 142205927623222673}
-  - component: {fileID: 9166653811579318375}
   - component: {fileID: 965563824164183425}
   m_Layer: 10
   m_Name: Player
@@ -210,7 +209,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3007221392902201822}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5bbd79b2fb50c9b46a1ddeb509e8f63f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -261,20 +260,6 @@ MonoBehaviour:
   _attack: {fileID: 869502307276421589}
   _animator: {fileID: 4783981229190576553}
   _attackPerSecond: 2.74
---- !u!114 &9166653811579318375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3007221392902201822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77ad30f3b627ec341a9b0bbc07e18795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 4783981229190576553}
-  _currentState: 
 --- !u!114 &965563824164183425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,7 +301,7 @@ Transform:
   m_GameObject: {fileID: 9100949488765567447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -363,7 +348,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 245ef1d6adb380b42b12658d902b81e3, type: 3}
+  m_Sprite: {fileID: 1744254682, guid: c5453036461ae604d819518c40270dfa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
