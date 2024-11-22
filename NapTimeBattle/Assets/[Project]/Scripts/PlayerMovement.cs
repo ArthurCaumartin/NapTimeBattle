@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rb;
     private InputAction _moveAction;
     private Animator _animator;
+    private AnimatorControler _animControler;
     private Vector2 _knockBack;
 
     private void Start()
     {
         _animator = GetComponentInChildren<Animator>();
+        _animControler = GetComponent<AnimatorControler>();
         _rb = GetComponent<Rigidbody2D>();
         _moveAction = GetComponent<PlayerInput>().actions.FindAction("Move");
     }
@@ -27,6 +29,12 @@ public class PlayerMovement : MonoBehaviour
         _aimContainer.right = _rb.velocity.ConvertTo8Direction().normalized;
 
         Vector2 dir = _rb.velocity.ConvertTo8Direction().normalized;
+
+        if (_rb.velocity.magnitude <= .1f)
+            _animControler.SetState(AnimatorControler.IDLE);
+        else
+            _animControler.SetState(_rb.velocity.x > 0 ? AnimatorControler.MOVE_RIGHT : AnimatorControler.MOVE_LEFT);
+
         _animator.SetFloat("DirectionX", dir.x);
         _animator.SetFloat("DirectionY", dir.y);
     }
