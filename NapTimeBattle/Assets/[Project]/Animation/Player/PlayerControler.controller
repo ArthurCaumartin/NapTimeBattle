@@ -373,7 +373,7 @@ AnimatorStateMachine:
     m_Position: {x: 100, y: -160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6565394281688030811}
-    m_Position: {x: 1100, y: -240, z: 0}
+    m_Position: {x: 1100, y: -220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1281192203907221618}
     m_Position: {x: 1100, y: -430, z: 0}
@@ -412,9 +412,9 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: -160, y: -250, z: 0}
-  m_EntryPosition: {x: -160, y: -150, z: 0}
-  m_ExitPosition: {x: 1870, y: -50, z: 0}
+  m_AnyStatePosition: {x: 120, y: -450, z: 0}
+  m_EntryPosition: {x: 120, y: -350, z: 0}
+  m_ExitPosition: {x: 120, y: -550, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 7247437239755783027}
 --- !u!1101 &-3467410140303218550
@@ -717,13 +717,13 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: AttackX
+  - m_Name: DirectionX
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: AttackY
+  - m_Name: DirectionY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -821,7 +821,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: AttackTrigger
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6565394281688030811}
   m_Solo: 0

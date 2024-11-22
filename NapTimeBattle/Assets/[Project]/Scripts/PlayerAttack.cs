@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
+    [SerializeField] private Attack _attack;
     [SerializeField] private Animator _animator;
     [SerializeField] private float _attackPerSecond = 1;
     private float _attackTime;
@@ -10,7 +11,6 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        // _animator.SetFloat("AttackSpeed", 1 / _attackPerSecond);
         _attackTime += Time.deltaTime;
         if (_attackTime > 1 / _attackPerSecond && _hasAttack)
         {
@@ -27,6 +27,8 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
+        print("Attack !");
+        _attack.DoAttack();
         _animator.SetTrigger("Attack");
     }
 }
