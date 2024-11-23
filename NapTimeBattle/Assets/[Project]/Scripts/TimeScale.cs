@@ -7,7 +7,7 @@ public class TimeScale : MonoBehaviour
     public GameObject canva;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             PauseGame();
         }
