@@ -9,7 +9,7 @@ public class PlayerLife : MonoBehaviour
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     public bool _hisHide;
-    private bool _canBeHit;
+    private bool _canBeHit = true;
 
     private void Start()
     {
@@ -18,11 +18,14 @@ public class PlayerLife : MonoBehaviour
 
     public void DoDamage(float value, Vector3 knockBack)
     {
-        if(!_canBeHit) return;
-        _currentLife -= value;
-        StartCoroutine(InvincibilityDuration(1));
-        if (_currentLife <= 0) Destroy(gameObject);
-        _playerMovement.SetKnockBack(knockBack);
+        if (_canBeHit)
+        {
+
+            _currentLife -= value;
+            StartCoroutine(InvincibilityDuration(1));
+            if (_currentLife <= 0) Destroy(gameObject);
+            _playerMovement.SetKnockBack(knockBack);
+        }
     }
 
     public IEnumerator InvincibilityDuration(float duration)
