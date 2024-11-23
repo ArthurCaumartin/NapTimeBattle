@@ -30,7 +30,7 @@ public class Daroned : MonoBehaviour
     {
         foreach (var item in _playerLifeList)
         {
-            if(!item._hisHide) item.DoDamage(1000, Vector2.zero);
+            if(!item._hisHide) item.DoDamage(1000, Vector2.zero, out bool notUse);
         }
         enabled = false;
     }

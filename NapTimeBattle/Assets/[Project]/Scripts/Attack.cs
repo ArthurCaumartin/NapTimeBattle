@@ -3,6 +3,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     [SerializeField] private Transform _attackPoint;
+    [SerializeField] private PlayerLife _life;
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private float _damage;
     [SerializeField] private float _range;
@@ -20,7 +21,13 @@ public class Attack : MonoBehaviour
                 continue;
             }
             print("Damage " + pl.name);
-            pl?.DoDamage(_damage, (pl.transform.position - transform.parent.position).normalized * _knockBackForce);
+
+            bool hisParry = false;
+            pl?.DoDamage(_damage, (pl.transform.position - transform.parent.position).normalized * _knockBackForce, out hisParry);
+            if (hisParry)
+            {
+                _life.DoDamage(0, (transform.parent.position - pl.transform.position).normalized * _knockBackForce, out bool h);
+            }
         }
     }
 
