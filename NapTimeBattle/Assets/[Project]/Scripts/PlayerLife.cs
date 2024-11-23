@@ -7,6 +7,7 @@ public class PlayerLife : MonoBehaviour
     [SerializeField] private float _maxLife = 100;
     [SerializeField] public float _currentLife = 0;
     [SerializeField] private PlayerMovement _playerMovement;
+    [SerializeField] private PlayerParry _playerParry;
     [SerializeField] private PlayerAttack _playerAttack;
     [SerializeField] private Animator _animator;
     [SerializeField] private SpriteRenderer _spriteRenderer;
@@ -18,11 +19,12 @@ public class PlayerLife : MonoBehaviour
         _currentLife = _maxLife;
     }
 
-    public void DoDamage(float value, Vector3 knockBack)
+    public void DoDamage(float value, Vector3 knockBack, out bool hisParry)
     {
-        if (_canBeHit)
-        {
+        hisParry = _playerParry.hisParry;
 
+        if (_canBeHit && !_playerParry.hisParry)
+        {
             _currentLife -= value;
             StartCoroutine(InvincibilityDuration(1));
             _playerMovement.SetKnockBack(knockBack);

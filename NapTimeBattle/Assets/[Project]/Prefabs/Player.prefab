@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 6287994386771288541}
   - component: {fileID: 142205927623222673}
   - component: {fileID: 965563824164183425}
+  - component: {fileID: 1268787370453261375}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -172,6 +173,7 @@ MonoBehaviour:
   _maxLife: 100
   _currentLife: 0
   _playerMovement: {fileID: 3559082430647650605}
+  _playerParry: {fileID: 1268787370453261375}
   _playerAttack: {fileID: 142205927623222673}
   _animator: {fileID: 4783981229190576553}
   _spriteRenderer: {fileID: 5151791810601405914}
@@ -276,6 +278,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _life: {fileID: 2676828209411945057}
+--- !u!114 &1268787370453261375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3007221392902201822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193daad6136962b48bfe38245fffba0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hisParry: 0
+  _animator: {fileID: 4783981229190576553}
+  _parryCdDuration: 2
+  _parryDuration: 0.5
 --- !u!1 &9100949488765567447
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +374,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 4.41596}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -396,6 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackPoint: {fileID: 7506630803649405505}
+  _life: {fileID: 2676828209411945057}
   _layerMask:
     serializedVersion: 2
     m_Bits: 1024
