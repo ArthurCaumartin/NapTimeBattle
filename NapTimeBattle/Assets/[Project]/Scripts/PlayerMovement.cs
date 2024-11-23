@@ -28,12 +28,13 @@ public class PlayerMovement : MonoBehaviour
         _targetVelocity = _moveAction.ReadValue<Vector2>();
         _rb.velocity = Vector2.Lerp(_rb.velocity, _targetVelocity * _speed + _knockBack, Time.deltaTime * _acceleration);
         _knockBack = Vector2.Lerp(_knockBack, Vector2.zero, Time.deltaTime * 5);
+
         _aimContainer.right = _rb.velocity.ConvertTo8Direction().normalized;
 
         Vector2 dir = _rb.velocity.ConvertTo8Direction().normalized;
 
         _renderer.flipX = _rb.velocity.x < 0;
-        _animator.SetBool("IsMoving", _rb.velocity.magnitude > .1f);
+        _animator.SetBool("IsMoving", _rb.velocity.magnitude > .3f);
     }
 
     public void SetKnockBack(Vector2 value)

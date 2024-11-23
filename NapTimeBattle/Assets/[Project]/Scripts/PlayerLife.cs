@@ -9,6 +9,7 @@ public class PlayerLife : MonoBehaviour
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     public bool _hisHide;
+    private bool _canBeHit;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class PlayerLife : MonoBehaviour
 
     public void DoDamage(float value, Vector3 knockBack)
     {
+        if(!_canBeHit) return;
         _currentLife -= value;
         StartCoroutine(InvincibilityDuration(1));
         if (_currentLife <= 0) Destroy(gameObject);
@@ -25,6 +27,7 @@ public class PlayerLife : MonoBehaviour
 
     public IEnumerator InvincibilityDuration(float duration)
     {
+        _canBeHit = false;
         for (int i = 0; i < 4; i++)
         {
             _spriteRenderer.color = _hurtColor;
@@ -32,5 +35,6 @@ public class PlayerLife : MonoBehaviour
             _spriteRenderer.color = Color.white;
             yield return new WaitForSeconds(duration / 4 / 2);
         }
+        _canBeHit = true;
     }
 }

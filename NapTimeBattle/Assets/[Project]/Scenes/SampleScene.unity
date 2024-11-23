@@ -641,7 +641,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 18.399683
+  orthographic size: 9.933792
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1170,22 +1170,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2676828209411945057, guid: e7108774f19d51741b133ef92d4cf288, type: 3}
-      propertyPath: _hurtColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2676828209411945057, guid: e7108774f19d51741b133ef92d4cf288, type: 3}
-      propertyPath: _hurtColor.b
-      value: 0.1957991
-      objectReference: {fileID: 0}
-    - target: {fileID: 2676828209411945057, guid: e7108774f19d51741b133ef92d4cf288, type: 3}
-      propertyPath: _hurtColor.g
-      value: 0.1957991
-      objectReference: {fileID: 0}
-    - target: {fileID: 2676828209411945057, guid: e7108774f19d51741b133ef92d4cf288, type: 3}
-      propertyPath: _hurtColor.r
-      value: 0.8301887
-      objectReference: {fileID: 0}
     - target: {fileID: 3007221392902201822, guid: e7108774f19d51741b133ef92d4cf288, type: 3}
       propertyPath: m_Name
       value: Player_1
