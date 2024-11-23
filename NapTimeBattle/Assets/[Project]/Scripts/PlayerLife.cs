@@ -7,6 +7,8 @@ public class PlayerLife : MonoBehaviour
     [SerializeField] private float _maxLife = 100;
     [SerializeField] public float _currentLife = 0;
     [SerializeField] private PlayerMovement _playerMovement;
+    [SerializeField] private PlayerAttack _playerAttack;
+    [SerializeField] private Animator _animator;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     public bool _hisHide;
     private bool _canBeHit = true;
@@ -23,8 +25,14 @@ public class PlayerLife : MonoBehaviour
 
             _currentLife -= value;
             StartCoroutine(InvincibilityDuration(1));
-            if (_currentLife <= 0) Destroy(gameObject);
             _playerMovement.SetKnockBack(knockBack);
+
+            if (_currentLife <= 0)
+            {
+                _playerMovement.enabled = false;
+                _playerAttack.enabled = false;
+                _animator.Play("Death");
+            }
         }
     }
 
