@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerLife : MonoBehaviour
 {
     [SerializeField] private Color _hurtColor;
-    [SerializeField] private float _maxLife = 100;
+    [SerializeField] public float _maxLife = 100;
     [SerializeField] public float _currentLife = 0;
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private PlayerParry _playerParry;
