@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 1268787370453261375}
   m_Layer: 10
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af595f95f3c1c67469ddd40942ce2b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hurtColor: {r: 0, g: 0, b: 0, a: 0}
+  _hurtColor: {r: 0.8301887, g: 0.1957991, b: 0.1957991, a: 1}
   _maxLife: 100
   _currentLife: 0
   _playerMovement: {fileID: 3559082430647650605}
@@ -306,6 +306,7 @@ GameObject:
   - component: {fileID: 5151791810601405914}
   - component: {fileID: 4783981229190576553}
   - component: {fileID: 869502307276421589}
+  - component: {fileID: 3365473309045723599}
   m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
@@ -418,6 +419,18 @@ MonoBehaviour:
   _layerMask:
     serializedVersion: 2
     m_Bits: 1024
-  _damage: 50
+  _damage: 10
   _range: 1.58
   _knockBackForce: 30
+--- !u!114 &3365473309045723599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100949488765567447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6642a54233aa0404198d2248665c181a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

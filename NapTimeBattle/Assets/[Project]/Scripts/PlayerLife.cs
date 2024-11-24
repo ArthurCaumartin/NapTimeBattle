@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerLife : MonoBehaviour
 {
     [SerializeField] private Color _hurtColor;
-    [SerializeField] private float _maxLife = 100;
+    [SerializeField] public float _maxLife = 100;
     [SerializeField] public float _currentLife = 0;
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private PlayerParry _playerParry;
@@ -19,13 +19,15 @@ public class PlayerLife : MonoBehaviour
         _currentLife = _maxLife;
     }
 
-    public void DoDamage(float value, Vector3 knockBack, out bool hisParry)
+    public void DoDamage(float damageValue, Vector3 knockBack, out bool hisParry)
     {
         hisParry = _playerParry.hisParry;
 
+        if (GetComponent<Pyjama>()) damageValue *= .5f;
+
         if (_canBeHit && !_playerParry.hisParry)
         {
-            _currentLife -= value;
+            _currentLife -= damageValue;
             StartCoroutine(InvincibilityDuration(1));
             _playerMovement.SetKnockBack(knockBack);
 
@@ -36,6 +38,12 @@ public class PlayerLife : MonoBehaviour
                 _animator.Play("Death");
             }
         }
+    }
+
+    public void Heal(float healValue)
+    {
+        _currentLife += healValue;
+        if (_currentLife > _maxLife) _currentLife = _maxLife;
     }
 
     public IEnumerator InvincibilityDuration(float duration)
