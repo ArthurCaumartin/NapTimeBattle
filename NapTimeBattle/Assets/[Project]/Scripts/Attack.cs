@@ -20,10 +20,10 @@ public class Attack : MonoBehaviour
                 print("pl = sefl / continue");
                 continue;
             }
-            print("Damage " + pl.name);
 
-            bool hisParry = false;
-            pl?.DoDamage(_damage, (pl.transform.position - transform.parent.position).normalized * _knockBackForce, out hisParry);
+            if(!pl) return;
+            AudioManager.instance.Play(AudioManager.instance.Hit);
+            pl.DoDamage(_damage, (pl.transform.position - transform.parent.position).normalized * _knockBackForce, out bool hisParry);
             if (hisParry)
             {
                 _life.DoDamage(0, (transform.parent.position - pl.transform.position).normalized * _knockBackForce, out bool h);

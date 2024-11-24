@@ -10,7 +10,7 @@ public class Item : MonoBehaviour
 
     void Start()
     {
-        if(tag == "Player") Use();
+        if (tag == "Player") Use();
     }
 
     void Update()
@@ -29,7 +29,6 @@ public class Item : MonoBehaviour
 
     public virtual void AddItem(GameObject target)
     {
-        
     }
 
     public void OnUse(InputValue value)
@@ -45,6 +44,8 @@ public class Item : MonoBehaviour
         Item otherItem = other.GetComponent<Item>();
         if (otherItem) Destroy(otherItem);
         AddItem(other.gameObject);
+        AudioManager.instance.PlayPitchUp(AudioManager.instance.PickUp);
+
         OnGrabEvent.Invoke();
         Destroy(gameObject);
     }

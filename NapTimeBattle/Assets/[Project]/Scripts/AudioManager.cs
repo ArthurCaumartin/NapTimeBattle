@@ -4,9 +4,11 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     private void Awake() { instance = this; }
-    private AudioSource _source;
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioSource _sourcePitch;
     public AudioClip Hit;
     public AudioClip Daronage;
+    public AudioClip PickUp;
 
     private void Start()
     {
@@ -16,5 +18,10 @@ public class AudioManager : MonoBehaviour
     public void Play(AudioClip clip)
     {
         _source.PlayOneShot(clip);
+    }
+
+    public void PlayPitchUp(AudioClip clip)
+    {
+        _sourcePitch.PlayOneShot(clip);
     }
 }

@@ -23,7 +23,7 @@ public class PlayerLife : MonoBehaviour
     {
         hisParry = _playerParry.hisParry;
 
-        if(GetComponent<Pyjama>()) damageValue *= .5f;
+        if (GetComponent<Pyjama>()) damageValue *= .5f;
 
         if (_canBeHit && !_playerParry.hisParry)
         {
@@ -43,7 +43,7 @@ public class PlayerLife : MonoBehaviour
     public void Heal(float healValue)
     {
         _currentLife += healValue;
-        if(_currentLife > _maxLife) _currentLife = _maxLife;
+        if (_currentLife > _maxLife) _currentLife = _maxLife;
     }
 
     public IEnumerator InvincibilityDuration(float duration)
