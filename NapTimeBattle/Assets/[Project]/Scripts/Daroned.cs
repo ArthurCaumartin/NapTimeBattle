@@ -58,6 +58,11 @@ public class Daroned : MonoBehaviour
         }
     }
 
+    public float GetRatio()
+    {
+        return Mathf.InverseLerp(0, _currentTimeBetweenDaronage, _currentDaronageTime);
+    }
+
     private void DaronCheckAnimationOn()
     {
         AudioManager.instance.Play(AudioManager.instance.Daronage);

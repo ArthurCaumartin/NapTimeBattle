@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94448634459974640a0c92b66db55341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameScene: SampleScene
+  nameScene: Integration
 --- !u!114 &2071011078
 MonoBehaviour:
   m_ObjectHideFlags: 0
