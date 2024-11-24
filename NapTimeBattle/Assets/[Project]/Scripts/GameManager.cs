@@ -18,12 +18,22 @@ public class GameManager : MonoBehaviour
             if (_deathTime >= 5)
             {
                 if (_life1._currentLife <= 0 && _life2._currentLife <= 0)
+                {
                     SceneManager.LoadScene("NobodyWinScene");
+                    return;
+                }
 
                 if (_life1._currentLife <= 0)
+                {
                     SceneManager.LoadScene("VictoryScenePlayer1");
+                    return;
+                }
+                
                 if (_life2._currentLife <= 0)
+                {
                     SceneManager.LoadScene("VictoryScenePlayer2");
+                    return;
+                }
             }
         }
     }

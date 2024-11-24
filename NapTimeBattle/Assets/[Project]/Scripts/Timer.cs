@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    public void SetRotation(float value)
+    [SerializeField] private Daroned _d;
+    public void Update()
     {
-        Vector3 newR;
-        
+        transform.eulerAngles = new Vector3(0, 0, -Mathf.Lerp(0, 360, _d.GetRatio()));        
     }
 }
