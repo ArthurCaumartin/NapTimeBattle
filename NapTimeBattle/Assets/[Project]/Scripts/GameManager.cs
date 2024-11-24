@@ -25,13 +25,13 @@ public class GameManager : MonoBehaviour
 
                 if (_life1._currentLife <= 0)
                 {
-                    SceneManager.LoadScene("VictoryScenePlayer1");
+                    SceneManager.LoadScene("VictoryScenePlayer2");
                     return;
                 }
-                
+
                 if (_life2._currentLife <= 0)
                 {
-                    SceneManager.LoadScene("VictoryScenePlayer2");
+                    SceneManager.LoadScene("VictoryScenePlayer1");
                     return;
                 }
             }
