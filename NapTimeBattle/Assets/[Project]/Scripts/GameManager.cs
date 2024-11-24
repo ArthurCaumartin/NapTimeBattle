@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,20 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (_life1._currentLife <= 0 || _life2._currentLife <= 0)
+        {
+            _deathTime += Time.deltaTime;
+            if (_deathTime >= 5)
+            {
+                if (_life1._currentLife <= 0 && _life2._currentLife <= 0)
+                    SceneManager.LoadScene("NobodyWinScene");
+
+                if (_life1._currentLife <= 0)
+                    SceneManager.LoadScene("VictoryScenePlayer1");
+                if (_life2._currentLife <= 0)
+                    SceneManager.LoadScene("VictoryScenePlayer2");
+            }
+        }
     }
 }
 

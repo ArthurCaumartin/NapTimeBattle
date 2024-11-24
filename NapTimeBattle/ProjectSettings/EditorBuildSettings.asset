@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/[Project]/Scenes/SceneWithUI.unity
     guid: e1e432fbe1c083444914f57db51a8574
+  - enabled: 1
+    path: Assets/[Project]/Scenes/VictoryScenePlayer1.unity
+    guid: 35e6a2a1b146fdb4dae0f4665606aa5f
+  - enabled: 1
+    path: Assets/[Project]/Scenes/VictoryScenePlayer2.unity
+    guid: e2766ccd10f7eb442bb5101d8b4a32e7
+  - enabled: 1
+    path: Assets/[Project]/Scenes/NobodyWinScene.unity
+    guid: 5c4400a48b14c1d44b53b533048600db
   m_configObjects: {}
