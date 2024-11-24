@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Xml.Linq;
 using UnityEngine;
 
 public class Daroned : MonoBehaviour
@@ -19,7 +17,6 @@ public class Daroned : MonoBehaviour
     [SerializeField] private float _daronageDuration;
     private float _currentDaronageTime;
     private float _currentTimeBetweenDaronage;
-
     private bool _isDaronCheck;
 
     void Start()
@@ -63,6 +60,7 @@ public class Daroned : MonoBehaviour
 
     private void DaronCheckAnimationOn()
     {
+        AudioManager.instance.Play(AudioManager.instance.Daronage);
         int r = Random.Range(1, 4);
         if (r == 1)
         {
