@@ -1,41 +1,84 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.Xml.Linq;
 using UnityEngine;
 
 public class Daroned : MonoBehaviour
 {
     public static Daroned instance;
-    private void Awake() { if (instance) Destroy(gameObject); instance = this; 
-    }
+    private void Awake() { if (instance) Destroy(gameObject); instance = this; }
+
     [SerializeField] private List<PlayerLife> _playerLifeList;
+    [SerializeField] private GameObject _door;
+    [SerializeField] private GameObject _animDoor;
+    [SerializeField] private GameObject _animTv;
+    [SerializeField] private GameObject _animWindow;
     [SerializeField] private float _minTimeBetweenDaronage = 10;
     [SerializeField] private float _maxTimeBetweenDaronage = 15;
-    public float _currentDaronageTime;
-    public float _currentTimeBetweenDaronage;
+    [Space]
+    [SerializeField] private float _daronageDuration;
+    private float _currentDaronageTime;
+    private float _currentTimeBetweenDaronage;
+
+    private bool _isDaronCheck;
 
     void Start()
     {
         _currentTimeBetweenDaronage = Random.Range(_minTimeBetweenDaronage, _maxTimeBetweenDaronage);
+        DisableAnim();
     }
-
 
     public void Update()
     {
-        _currentDaronageTime += Time.deltaTime;
-        if (_currentDaronageTime > _currentTimeBetweenDaronage)
+        if (_isDaronCheck == false)
         {
-            _currentDaronageTime = 0;
-            DaronCheck();
+            _currentDaronageTime += Time.deltaTime;
+            if (_currentDaronageTime > _currentTimeBetweenDaronage)
+            {
+                _currentDaronageTime = 0;
+                DaronCheckAnimationOn();
+                _isDaronCheck = true;
+            }
+        }
+        else
+        {
+            foreach (var item in _playerLifeList)
+            {
+                if (!item._hisHide)
+                {
+                    item.DoDamage(1000, Vector2.zero, out bool notUse);
+                    // enabled = false;
+                }
+            }
+
+            _currentDaronageTime += Time.deltaTime;
+            if (_currentDaronageTime > _daronageDuration)
+            {
+                _currentDaronageTime = 0;
+                DisableAnim();
+                _isDaronCheck = false;
+            }
         }
     }
 
-    private void DaronCheck()
+    private void DaronCheckAnimationOn()
     {
-        foreach (var item in _playerLifeList)
+        int r = Random.Range(1, 4);
+        if (r == 1)
         {
-            if (!item._hisHide) item.DoDamage(1000, Vector2.zero, out bool notUse);
+            _door.SetActive(true);
+            _animDoor.SetActive(true);
         }
-        enabled = false;
+        if (r == 2) _animTv.SetActive(true);
+        if (r == 3) _animWindow.SetActive(true);
+    }
+
+    public void DisableAnim()
+    {
+        _door.SetActive(false);
+        _animDoor.SetActive(false);
+        _animTv.SetActive(false);
+        _animWindow.SetActive(false);
     }
 
     public void SetDarnedRatio(float value)

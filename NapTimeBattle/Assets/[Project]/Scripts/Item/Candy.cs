@@ -13,6 +13,7 @@ public class Candy : Item
 
     public override void AddItem(GameObject target)
     {
-        target.AddComponent<Candy>();
+        Candy c =target.AddComponent<Candy>();
+        c.Use();
     }
 }

@@ -9,6 +9,7 @@ public class Pyjama : Item
 
     public override void AddItem(GameObject target)
     {
-        target.AddComponent<Pyjama>();
+        Pyjama p = target.AddComponent<Pyjama>();
+        p.Use();
     }
 }

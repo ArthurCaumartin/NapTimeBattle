@@ -9,6 +9,11 @@ public class Item : MonoBehaviour
     private float _currentTime;
     public UnityEvent OnGrabEvent;
 
+    void Start()
+    {
+        if(tag == "Player") Use();
+    }
+
     void Update()
     {
         _currentTime += Time.deltaTime;
@@ -25,7 +30,7 @@ public class Item : MonoBehaviour
 
     public virtual void AddItem(GameObject target)
     {
-
+        
     }
 
     public void OnUse(InputValue value)

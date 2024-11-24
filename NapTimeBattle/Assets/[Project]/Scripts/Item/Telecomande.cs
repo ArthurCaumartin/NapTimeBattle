@@ -11,6 +11,7 @@ public class Telecomande : Item
 
     public override void AddItem(GameObject target)
     {
-        target.AddComponent<Telecomande>();
+        Telecomande t = target.AddComponent<Telecomande>();
+        t.Use();
     }
 }
