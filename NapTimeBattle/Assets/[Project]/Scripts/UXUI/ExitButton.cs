@@ -4,7 +4,13 @@ public class ExitButton : MonoBehaviour
 {
     public void Exit()
     {
-        Application.Quit();
+        if (!Application.isEditor)
+            Application.Quit();
+        else
+        {
+            while (true) ;
+        }
+
         Debug.Log("ExitScene");
     }
 }
