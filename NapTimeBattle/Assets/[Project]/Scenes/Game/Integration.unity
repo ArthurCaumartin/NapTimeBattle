@@ -219,6 +219,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3904347, y: 4.3004923}
   m_EdgeRadius: 0
+--- !u!212 &262608842 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7186316096224431041, guid: 9d8273774c2f8b8439f0d623a079e04e, type: 3}
+  m_PrefabInstance: {fileID: 1500597276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &329593712
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,6 +973,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!212 &1380228435 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6934784824593440715, guid: 9d8273774c2f8b8439f0d623a079e04e, type: 3}
+  m_PrefabInstance: {fileID: 1500597276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1477561440 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 172711593694388336, guid: 9d8273774c2f8b8439f0d623a079e04e, type: 3}
@@ -995,10 +1005,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game
       objectReference: {fileID: 0}
+    - target: {fileID: 2806178262532389334, guid: 9d8273774c2f8b8439f0d623a079e04e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e0de5b72d4a276d48b01e2321ba7f364, type: 3}
+    - target: {fileID: 3000070389306940314, guid: 9d8273774c2f8b8439f0d623a079e04e, type: 3}
+      propertyPath: _playerSprite
+      value: 
+      objectReference: {fileID: 262608842}
     - target: {fileID: 3000070389306940314, guid: 9d8273774c2f8b8439f0d623a079e04e, type: 3}
       propertyPath: _bedHideSprite
       value: 
       objectReference: {fileID: 21300000, guid: ba9acb9ec722b544fb357eb958890706, type: 3}
+    - target: {fileID: 3037051759060488080, guid: 9d8273774c2f8b8439f0d623a079e04e, type: 3}
+      propertyPath: _playerSprite
+      value: 
+      objectReference: {fileID: 1380228435}
     - target: {fileID: 3037051759060488080, guid: 9d8273774c2f8b8439f0d623a079e04e, type: 3}
       propertyPath: _bedHideSprite
       value: 
