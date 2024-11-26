@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!212 &200312557 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2806178262532389334, guid: 9d8273774c2f8b8439f0d623a079e04e, type: 3}
+  m_PrefabInstance: {fileID: 1500597276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &209327205
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,6 +995,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game
       objectReference: {fileID: 0}
+    - target: {fileID: 3000070389306940314, guid: 9d8273774c2f8b8439f0d623a079e04e, type: 3}
+      propertyPath: _bedHideSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ba9acb9ec722b544fb357eb958890706, type: 3}
+    - target: {fileID: 3037051759060488080, guid: 9d8273774c2f8b8439f0d623a079e04e, type: 3}
+      propertyPath: _bedHideSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ba9acb9ec722b544fb357eb958890706, type: 3}
     - target: {fileID: 5198915962169280672, guid: 9d8273774c2f8b8439f0d623a079e04e, type: 3}
       propertyPath: _maxTimeBetweenDaronage
       value: 10
@@ -1067,8 +1080,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1514875190}
-  - component: {fileID: 1514875189}
   - component: {fileID: 1514875188}
+  - component: {fileID: 1514875191}
   m_Layer: 0
   m_Name: HidePlace Bed (1)
   m_TagString: Untagged
@@ -1121,19 +1134,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.1657095, y: 4.3004923}
   m_EdgeRadius: 0
---- !u!114 &1514875189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1514875187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74152f330bf6cd74083fddfb2d9b54e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAuto: 0
 --- !u!4 &1514875190
 Transform:
   m_ObjectHideFlags: 0
@@ -1149,6 +1149,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1514875191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514875187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b7d65c563393a4da4db95f23680815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAuto: 0
+  isAllreadyTaken: 0
+  _sprite: {fileID: 200312557}
+  _baseSprite: {fileID: 21300000, guid: e0de5b72d4a276d48b01e2321ba7f364, type: 3}
 --- !u!1 &1552897531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,6 +1293,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af595f95f3c1c67469ddd40942ce2b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &1838290582 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6367443999820582248, guid: 9d8273774c2f8b8439f0d623a079e04e, type: 3}
+  m_PrefabInstance: {fileID: 1500597276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2018221185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,8 +1550,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2128157639}
-  - component: {fileID: 2128157638}
   - component: {fileID: 2128157637}
+  - component: {fileID: 2128157640}
   m_Layer: 0
   m_Name: HidePlace Bed
   m_TagString: Untagged
@@ -1583,19 +1604,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.1657095, y: 4.3004923}
   m_EdgeRadius: 0
---- !u!114 &2128157638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128157636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74152f330bf6cd74083fddfb2d9b54e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAuto: 0
 --- !u!4 &2128157639
 Transform:
   m_ObjectHideFlags: 0
@@ -1611,6 +1619,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2128157640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128157636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b7d65c563393a4da4db95f23680815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAuto: 0
+  isAllreadyTaken: 0
+  _sprite: {fileID: 1838290582}
+  _baseSprite: {fileID: 21300000, guid: e0de5b72d4a276d48b01e2321ba7f364, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
